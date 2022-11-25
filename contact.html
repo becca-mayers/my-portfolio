@@ -28,28 +28,7 @@
   <link href="css/responsive.css" rel="stylesheet" />
   
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init('DimhWmARfCYtYNp8F');
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                // generate a five digit number for the contact_number variable
-                this.contact_number.value = Math.random() * 100000 | 0;
-                // these IDs from the previous steps
-                emailjs.sendForm('contact_service', 'contact_form', this)
-                    .then(function() {
-                        console.log('SUCCESS!');
-                    }, function(error) {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
+  
 </head>
 
 <body>
@@ -241,8 +220,25 @@
   <script src="js/custom.js"></script>
   <!-- Google Map -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUFnzN3S0emwKQBliHcStlU4_W2q1RRyM&callback=myMap"></script>
-  <!-- End Google Map -->
-
+  <!-- Email JS -->
+  <script type="text/javascript">
+      (function() {
+      emailjs.init("DimhWmARfCYtYNp8F");
+      })();
+  </script>
+  <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                emailjs.sendForm('service_2ep5g0e', 'template_hy8e63a', 'contact-form')
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </body>
 
 </html>
