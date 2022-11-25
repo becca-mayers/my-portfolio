@@ -26,6 +26,30 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+  
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('DimhWmARfCYtYNp8F');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -103,7 +127,7 @@
                 Contact Us
               </h2>
             </div>
-            <form action="" id="myForm">
+            <form action="" id="contact-form">
               <div>
                 <input type="text" placeholder="Full Name" id="FullName"/>
               </div>
@@ -194,7 +218,6 @@
   </section>
   <!-- end info section -->
 
-
   <!-- footer section -->
   <footer class="footer_section">
     <div class="container">
@@ -219,38 +242,6 @@
   <!-- Google Map -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUFnzN3S0emwKQBliHcStlU4_W2q1RRyM&callback=myMap"></script>
   <!-- End Google Map -->
-  <!-- EmailJS -->
-  <script
-    type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
-  ></script>
-
-  <script type="text/javascript">      (function () {
-      emailjs.init("DimhWmARfCYtYNp8F");
-    })();
-  </script>
-  
-  <script>
-    document
-      .getElementById("myForm")
-      .addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        const serviceID = "service_2ep5g0e";
-        const templateID = "template_opp8t3h";
-
-        emailjs.sendForm(serviceID, templateID, this).then(
-          (response) => {
-            console.log("SUCCESS!", response.status, response.text);
-            alert("SUCCESS!");
-          },
-          (error) => {
-            console.log("FAILED...", error);
-            alert("FAILED...", error);
-          }
-        );
-      });
-  </script>
 
 </body>
 
