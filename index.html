@@ -19,6 +19,7 @@
     <link href="assets/flexslider/flexslider.css" rel="stylesheet">
 	<!-- Theme Style -->
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<!-- Animations -->
     <link href="css/animate.css" rel="stylesheet">
 	<!-- Custom Favicon -->
@@ -31,6 +32,15 @@
     <script src="assets/html5shiv/html5shiv.js"></script>
     <script src="assets/respond/respond.min.js"></script>
     <![endif]-->
+    
+    <style>
+        .boxy-shadow {
+        float: center;
+        box-shadow: 7px 7px 7px 7px #666666;
+        }
+        
+        .subheader {max-width: 975px;}
+    </style>
   </head>
     <body id="top">
 
@@ -38,9 +48,7 @@
       <div id="preloader"></div>
 
 
-	  	<!-- ==========================
-        HEADER SECTION 
-        =========================== -->
+	  	<!--  HEADER SECTION  -->
         <header id="home">
 		    <!-- creative menu -->
             <div class="container-fluid">
@@ -91,13 +99,8 @@
           </section>
 		  <!-- Header Image End -->
         </header>
-		<!-- ==========================
-        HEADER SECTION END  
-        =========================== -->
 
-<!-- ==========================
-        SERVICE SECTION 
-        =========================== -->
+        <!-- SERVICE SECTION  -->
         <section class="features text-center section-padding" id="service">
           <div class="container">
         <!-- Headline -->
@@ -114,18 +117,18 @@
                     <div class="icon">
                       <i class="fa-brands fa-python"></i><!-- Icon -->
                     </div>
-                    <h2>Python Programming</h2><!-- Title -->
+                    <h2>Python Coding</h2><!-- Title -->
                     <p>Automated Bots. Web Scraping.</p><!-- Description -->
                   </div>
-          <!-- Service Box 2 -->
+              <!-- Service Box 2 -->
                   <div class="col-md-4 wp2 item delay-05s">
                     <div class="icon">
                       <i class="fa-solid fa-tablet-screen-button"></i><!-- Icon -->
                     </div>
-                    <h2>Web Applications</h2><!-- Title -->
+                    <h2>Web Apps</h2><!-- Title -->
                     <p>Dashboards. Responsive Web Applications.</p><!-- Description -->
                   </div>
-          <!-- Service Box 3 -->
+              <!-- Service Box 3 -->
                   <div class="col-md-4 wp2 item delay-1s">
                     <div class="icon">
                       <i class="fa-solid fa-square-root-variable"></i><!-- Icon -->
@@ -140,91 +143,79 @@
           </div>
         </section>
 
-		<div class="container-fluid">
-		    <!-- About 1 -->
-			<div class="row">
-				<div class="col-md-6 nopadding features-intro-img">
-					<div class="about-image" style="background-image:url(img/maternal-health-dashboard.png)"></div><!-- about image 1 -->
-				</div>
-				<div class="col-md-6 about-text">
-					<h6>Maternal Health Dashboard</h6><!-- headline-->
-					<p>Multi-page dashboard investigating maternal outcomes. Built with Python on the Dash framework and served via AWS Amplify. This dashboard demonstrates an examination of physician-documented indications for maternal outcomes by investigating potential contributing indications.</p><br><!-- About Text 1 -->
-					<a target="_blank" href="https://maternal-health-dashboard-1.herokuapp.com/" class="weight-outline-btn">Check It Out Here</a><!-- read more button  -->			
-				</div>
-			</div>
-			<!-- About 2 -->
-			<div class="row color-bg-blk">
-    			<div class="col-md-6 nopadding features-intro-img">
-					<div class="about-image" style="background-image:url(img/cyber-dashboard.png)"></div><!-- about image 2 -->
-				</div>
-				<div class="col-md-6 about-text">
-					<h6>Cyber Security Dashboard</h6><!-- Headline -->
-					<p>Single-page dashboard investigating IC3 Reporting and Google Exploits for 2016 to 2021. Built with HTML, CSS, and JavaScript, and served via AWS Amplify.</p><br><!-- About Text 2 -->
-					<a target="_blank" href="https://main.d35bm0m56e8c2f.amplifyapp.com/" class="weight-outline-btn">Check It Out Here</a>	<!-- read more button  -->				
-				</div>
-			</div>
-			<!-- About 3 -->
-			<div class="row">
-				<div class="col-md-6 nopadding features-intro-img">
-					<div class="about-image" style="background-image:url(img/leapfrog-calculator.png)"></div><!-- about image 3 -->
-				</div>
-				<div class="col-md-6 about-text">
-					<h6>The Leapfrog Safety Grade Calculator</h6><!-- Headline-->
-					<p>Calculate estimated scores for each survey section (BCMA, Safe Pracice, Hand Hygiene, etc) and the overall estimated Leapfrog Safety Score & Grade. Underlying algos based directly on the Leapfrog Group's algorithm documentation.</p><br><!-- About Text 3 -->
-					<a target="_blank" href="https://becca-mayers-the-leapfrog-calculator-app-n1z34j.streamlit.app/" class="weight-outline-btn">Check It Out Here</a><!-- read more button  -->					
-				</div>
-			</div>
-		</div>
-		<!-- End -->
-
+        <hr>
+        
 		<!-- Portfolio -->
-        <section class="swag text-center" id="portfolio">
+        <section class="swag" id="portfolio">
           <div class="container">
           
 		    <!-- Headline -->
-            <div class="row">
+            <div class="row justify-content-center">
               <h1 class="arrow">
                 Recent <span>Projects</span>
               </h1>
             </div>
           </div>
-        </section>
 
         <div class="container">
-          <div class="row">
-
-              <!-- Akins Auto -->
-              <div class="col-md-8 col-sm-12">
-                  <div class="img">
-                      <a href="https://main.d2leap4r2htu39.amplifyapp.com/" title="Akins Auto"><img src="img/portfolio/akins-auto-scaled.png" alt="Portfolio Item"></a>
-                  </div>
+        
+          <!-- Akins Auto -->
+          <div class="row justify-content-center">
+               <div class="col about-text">
+    		   	 <h6>Akins Auto</h6>
+    		   	 <p class="subheader">Multi-page website profiling auto repair business services. Utilizes the <a href="https://developers.google.com/maps" target="_blank">Google Maps API</a>, <a href="https://www.emailjs.com/" target="_blank">EmailJS</a> contact form, and click-to-call/click-to-email elements. Built with HTML, CSS, and Javascript, and deployed via <a href="https://aws.amazon.com/amplify/" target="_blank">AWS Amplify</a>.</p>
+                  <a href="https://akinsauto.tech/" target="_blank" title="Akins Auto"><img src="img/portfolio/akins-auto-scaled-cropped.png" alt="Portfolio Item" class="rounded boxy-shadow"></a>  
               </div>
-            </div>
-           
-          <br>
+          </div>
           
-            <!-- I got Options -->
-            <div class="col-md-8 col-sm-12">
-                <div class="img">
-                    <a href="https://www.igotoptionsapp.com/" title="I Got Options App"><img src="img/portfolio/app-hero-semi-wide.png" alt="Portfolio Item"></a>
-                </div>
+          <hr>
+  
+         <!-- Cyber Security Dashboard-->
+         <div class="row justify-content-center">
+             <div class="col about-text">
+  		   	 <h6>Cyber Security Dashboard</h6>
+  		   	 <p class="subheader">Single-page dashboard investigating IC3 Reporting and Google Exploits for 2016 to 2021. Built with HTML, CSS, and JavaScript, and served via <a href="https://aws.amazon.com/amplify/" target="_blank">AWS Amplify</a>. Inspired by <a href="https://www.creative-tim.com/product/material-dashboard-dark" target="_blank">Creative Tim's Material Dashboard Dark Edition</a>.</p>
+                <a href="https://main.d35bm0m56e8c2f.amplifyapp.com/" target="_blank" title="Cyber Security Dashboard"><img src="img/portfolio/cyber-scaled.png" alt="Portfolio Item" class="rounded boxy-shadow"></a>  
             </div>
+         </div>
+         <hr>
+                    
+          <!-- I got Options -->
+          <div class="row justify-content-center">
+            <div class="col about-text">
+                <h6>Female Options Calculator</h6>
+                <p class="subheader">The accurate alternative to the <a href="https://igotstandardsbro.com/" target="_blank">Female Delusion Calculator</a>. Built with Python and the Streamlit web framework, and deployed via <a href="https://www.heroku.com" target="_blank">Heroku</a>.</p>
+                <a href="http://igotoptionsapp.com/" target="_blank" title="I Got Options App"><img src="img/portfolio/app-hero-semi-wide-slim.png" alt="Portfolio Item" class="rounded boxy-shadow"></a>
+            </div> 
           </div>
-         
-        <br>
-
-        <!-- Alert Bot -->
-        <div class="row">
-            <div class="col-md-8 col-sm-12">  
-                <div class="img">
-                    <a href="https://github.com/becca-mayers/alert-bot" title="Project Two - Alert Bot"><img src="img/portfolio/alert-bot-scaled.png" alt="Portfolio Item"></a>
-                </div>
+          <hr>
+           
+          <!-- Maternal Health -->
+          <div class="row justify-content-center">
+            <div class="col about-text">  
+                <h6>Maternal Health Dashboard</h6>
+                <p class="subheader">Multi-page dashboard investigating maternal outcomes. Built with Python on the <a href="https://dash.plotly.com/" target="_blank">Dash framework</a> and deployed via <a href="https://www.heroku.com" target="_blank">Heroku</a>. This dashboard demonstrates an examination of physician-documented indications for maternal outcomes by investigating potential contributing indications.</p>
+                <a href="https://maternal-health-dashboard-1.herokuapp.com/" target="_blank" title="Maternal Health Dashboard"><img src="img/portfolio/maternal-health-dashboard-scaled.png" alt="Portfolio Item" class="rounded boxy-shadow"></a>
             </div>
-          </div>
+          </div> 
+          <hr>
+          
+           <!-- Leapfrog -->
+           <div class="row justify-content-center">
+             <div class="col about-text">  
+                 <h6>Leafrog Safety Grade Calculator</h6>
+                 <p class="subheader">Calculate estimated scores for each survey section (BCMA, Safe Pracice, Hand Hygiene, etc) and the overall estimated Leapfrog Safety Score & Grade. Underlying algos based directly on the <a href="https://www.leapfroggroup.org/" target="_blank">Leapfrog Group</a>'s algorithm documentation. Built with Python and the <a href="https://streamlit.io" target+"_blank">Streamlit framework</a>, deployed via <a href="https://streamlit.io/cloud" target="_blank">Streamlit Cloud</a>.</p>
+                 <a href="https://becca-mayers-the-leapfrog-calculator-app-n1z34j.streamlit.app/" target="_blank" title="Leafrog Safety Grade Calculator"><img src="img/portfolio/leapfrog-calculator.png" alt="Portfolio Item" class="rounded boxy-shadow"></a>
+             </div>
+           </div> 
+           <hr>
+          
         </div>
        </div>
+       
+      </section>
   	   <!-- -->
-
+    
       <br>
   					
 		<!-- CUSTOM SPACER-->
